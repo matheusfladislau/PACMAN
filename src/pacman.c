@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "pacman.h"
-#include "mapa.h" 
+#include "../include/pacman.h"
+#include "../mapa/include/mapa.h" 
 
 MAPA m;
 POSICAO p;

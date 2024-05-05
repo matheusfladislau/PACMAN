@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "mapa.h"
+#include "../include/mapa.h"
 
 void liberarmapa(MAPA* m) {
   for (int i = 0; i < m->linhas; i++)
@@ -18,7 +18,7 @@ void alocarmapa(MAPA* m) {
 
 void lermapa(MAPA* m) {
 	FILE*f;
-	f = fopen("mapa.txt", "r");
+	f = fopen("./mapa/mapa.txt", "r");
 	if (f == 0) {
 		printf("Não foi possível acessar o mapa.\n");
 		exit(EXIT_FAILURE);
