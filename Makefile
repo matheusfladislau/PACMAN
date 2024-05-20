@@ -6,7 +6,6 @@ all: $(OUT)
 	
 $(OUT): clean
 	gcc $(OBJECTS) $(HEADERS) -o $@
-	./$@
 	
 clean:
 	-rm -f $(OUT)

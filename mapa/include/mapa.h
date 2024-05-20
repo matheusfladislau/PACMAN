@@ -1,3 +1,9 @@
+#define FANTASMA 'F'
+#define PERSONAGEM '@'
+#define VAZIO '.'
+#define PAREDE_VERTICAL '|'
+#define PAREDE_HORIZONTAL '-'
+
 typedef struct mapa {
   char** matriz;
   int linhas;
@@ -9,7 +15,17 @@ typedef struct posicao {
   int y;
 } POSICAO;
 
-void encontrarmapa(MAPA* m, POSICAO* p, char c);
+void copiamapa(MAPA* destino, MAPA* origem);
+
+int posicaovalida(MAPA* m, int x, int y);
+
+int posicaoparede(MAPA* m, int x, int y);
+
+int posicaopersonagem(MAPA* m, int x, int y, char c);
+
+void andarmapa(MAPA* m, int x, int y, int proxx, int proxy);
+
+int podeandar(MAPA* m, int x, int y, char c); 
 
 void liberarmapa(MAPA* m);
   
@@ -19,4 +35,4 @@ void lermapa(MAPA* m);
 
 void imprimirmapa(MAPA* m);
 
-int verificalimite(MAPA* m, int x, int y);
+int encontrarmapa(MAPA* m, POSICAO* p, char c);
